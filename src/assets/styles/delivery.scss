@@ -1,0 +1,59 @@
+
+
+.delivery {
+  padding: 1rem 0;
+  &__wrapper {
+    display: flex;
+    gap: 1.5rem;
+  }
+  &__title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  &__inner {
+    padding: 1.5rem;
+    border: 1px solid #BEBEBE;
+    border-radius: .5rem;
+  }
+  &__desc {
+    font-weight: normal;
+  }
+
+  &__items-title {
+    font-weight: normal;
+    font-size: 24px;
+    margin: 1rem 0 0.8rem;
+  }
+  &__items {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  &__item-title {
+    font-weight: 700;
+  }
+
+  &__payment-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  @media (max-width:900px) {
+    &__wrapper {
+      flex-direction: column;
+    }
+  }
+  @media (max-width:700px) {
+    &__title {
+      font-size: 24px;
+    }
+    &__desc {
+      font-size: 14px;
+    }
+  }
+}
+
+

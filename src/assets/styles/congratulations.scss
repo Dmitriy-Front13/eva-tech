@@ -1,0 +1,158 @@
+// Variables
+$primary-color: #3498db;
+$background-color: #f0f4f8;
+$card-background: #ffffff;
+$text-color: #333333;
+$muted-background: hsla(240 4.8% 95.9%);
+
+// Breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+
+.congratulations {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, lighten($primary-color, 40%), $background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  &__card {
+    background-color: $card-background;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 40rem;
+    margin: 1rem;
+
+    @media (max-width: $breakpoint-sm) {
+      margin: 0.5rem;
+    }
+  }
+
+  &__header {
+    text-align: center;
+    padding: 1.5rem;
+
+    @media (max-width: $breakpoint-sm) {
+      padding: 1rem;
+    }
+  }
+
+  &__title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+
+    @media (max-width: $breakpoint-md) {
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__content {
+    padding: 1.5rem;
+
+    @media (max-width: $breakpoint-sm) {
+      padding: 1rem;
+    }
+  }
+
+  &__message {
+    font-size: 1.125rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+
+    @media (max-width: $breakpoint-md) {
+      font-size: 1rem;
+    }
+  }
+
+  &__status {
+    background-color: $muted-background;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    margin-bottom: 1.5rem;
+
+    @media (max-width: $breakpoint-sm) {
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    color: $text-color;
+
+    @media (max-width: $breakpoint-md) {
+      font-size: 1.125rem;
+    }
+  }
+
+  &__contact {
+    text-align: center;
+  }
+
+  &__contact-text {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  &__email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__icon {
+    margin-right: 0.5rem;
+    width: 2rem;
+    height: 2rem;         
+    
+    &--small {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      width: 1.5rem;
+      height: 1.5rem;
+
+      &--small {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      margin-right: 0.25rem;
+      margin-bottom: 0.25rem;
+    }
+  }
+}

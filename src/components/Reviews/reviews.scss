@@ -1,0 +1,166 @@
+.reviews {
+  padding: 3rem 0;
+
+  &__title {
+    font-weight: 800;
+    font-size: 36px;
+    color: #000;
+    text-align: center;
+    padding-bottom: 55px;
+  }
+
+  &__item-headline {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item-text {
+    margin-top: 90px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+    position: relative
+  }
+
+  &__swiper {
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: #000;
+    }
+  }
+}
+
+.slide__inner {
+  border: .5px solid #000;
+  border-radius: 23px;
+  padding: 60px 90px 100px 100px;
+  margin: 0 60px;
+}
+
+.headline {
+  &__inner {
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__inner-avatar {
+    width: 105px;
+    height: 105px;
+    border-radius: 100%;
+  }
+
+  &__inner-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__inner-user {
+    margin: 0;
+    font-weight: 600;
+    font-size: 24px;
+    color: #000;
+  }
+
+  &__inner-date {
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+  }
+
+  &-photo {
+    width: 105px;
+    height: 105px;
+    cursor: pointer
+  }
+}
+
+@media (max-width: 1180px) {
+  .slide__inner {
+    padding: 50px
+  }
+}
+
+@media (max-width:760px) {
+  .reviews {
+    padding: 30px 0;
+
+    &__item-text {
+      margin-top: 40px
+    }
+  }
+}
+
+@media (max-width:630px) {
+  .slide__inner {
+    padding: 30px;
+    margin: 0 40px
+  }
+
+  .headline {
+    &__inner {
+      justify-content: flex-start;
+      gap: 5px;
+    }
+
+    &__inner-text {
+      gap: 5px;
+    }
+
+    &__inner-user {
+      font-size: 20px;
+    }
+
+    &__inner-date {
+      font-size: 14px;
+    }
+  }
+
+  .headline-photo,
+  .headline__inner-avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .reviews__item-text {
+    font-size: 14px
+  }
+
+  :root {
+    --swiper-navigation-size: 38px
+  }
+}
+
+@media (max-width: 440px) {
+  .slide__inner {
+    padding: 20px;
+    margin: 0 30px
+  }
+
+  .headline {
+    &__inner-user {
+      font-size: 16px
+    }
+    &__inner-date {
+      font-size: 12px
+    }
+  }
+
+  .headline-photo,
+  .headline__inner-avatar {
+    width: 60px;
+    height: 60px
+  }
+
+  .reviews__item-text {
+    margin-top: 20px;
+    font-size: 12px
+  }
+
+  :root {
+    --swiper-navigation-size: 28px
+  }
+}

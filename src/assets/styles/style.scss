@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap");
+@import 'vars';
+@import 'reset';
+@import 'custom';
+@import 'icons';
+@import 'animation';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  color: $dark;
+}
+
+.container {
+  max-width: 80rem;
+  padding: 0 1rem;
+  margin-inline: auto;
+}
+
+.logo img {
+  max-width: 10rem;
+}
+
+.section {
+  padding: 5rem 0 3rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.sub-title {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.text {
+  font-size: 1rem
+}
+
+.text-line-through {
+  text-decoration: line-through;
+  font-size: .875rem
+}
+
+.section {
+  padding: 5rem 0 3rem;
+
+  &__title {
+    color: $dark;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+
+    &:has(+ .section__sub-title) {
+      margin-bottom: 0.75rem;
+    }
+
+    span {
+      color: $primary;
+    }
+  }
+
+  &__sub-title {
+    text-align: center;
+    color: $dark-grey;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.button {
+  display: flex;
+  margin: 0 auto;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  background-color: $primary;
+  border-radius: 0.25rem;
+  border: 2px solid $primary;
+  transition: 0.3s ease background-color;
+  padding: 0.625rem 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1.15;
+
+  &:focus-within,
+  &:focus,
+  &:active {
+    outline: 2px solid $primary-300;
+    outline-offset: 2px;
+  }
+
+  &:hover {
+    background-color: $primary-300;
+    cursor: pointer;
+  }
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: .125rem
+}
+
+textarea {
+  resize: vertical
+}
+
+.shopNow-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  width: 100%;
+  height: 75px;
+  padding: 0;
+  margin: 3rem auto 0;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .25);
+  background: linear-gradient(184deg, #429600 0%, #59ca00 100%);
+  border-radius: 41px;
+  font-weight: 700;
+  font-size: 32px;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+@media (max-width:48em) {
+  .section {
+    padding: 2.5rem 0;
+
+    &__title {
+      font-size: 2rem;
+    }
+  }
+
+  .title {
+    font-size: 2.5rem
+  }
+
+  .sub-title {
+    font-size: 1.5em
+  }
+}
+
+@media (max-width:30em) {
+  .section {
+    padding: 1.5rem 0;
+
+    &__title {
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem
+    }
+  }
+
+  .title {
+    font-size: 1.875rem
+  }
+
+
+  .sub-title,
+  .section__sub-title {
+    font-size: 1.125rem
+  }
+
+  .text {
+    font-size: .825rem
+  }
+
+  input,
+  .button {
+    padding: .5rem 1rem
+  }
+}
+
+.form--pending [type="submit"] {
+  pointer-events: none;
+  cursor: wait;
+  position: relative;
+  background: $primary-300;
+}
+
+.form--pending [type="submit"]::before {
+  content: "";
+  width: 1em;
+  height: 1em;
+  border: .25em solid #fff;
+  border-bottom-color: $primary;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.form--pending-order [type="submit"] {
+  pointer-events: none;
+  cursor: wait;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 3px 4px 6px 1px rgba(54, 12, 0, .25);
+}
+
+.form--pending-order [type="submit"]::before {
+  content: "";
+  width: 1em;
+  height: 1em;
+  border: .25em solid #fff;
+  border-bottom-color: $primary;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  margin-right: 5px;
+  animation: rotation 1s linear infinite
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: .125rem
+}
+
+.form-help {
+  font-size: .875rem;
+  color: $primary;
+}

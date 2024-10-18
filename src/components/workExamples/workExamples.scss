@@ -1,0 +1,42 @@
+@import '../../assets/styles/vars';
+
+.work-examples {
+  margin-top: 4rem;
+  padding: 2rem 0 3rem;
+  background-color: $light-grey;
+}
+
+.work-examples-swiper {
+  width: 100%;
+  padding-bottom: 3rem;
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: $primary;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: $primary;
+  }
+}
+
+
+.work-example-slide {
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  height: 20rem
+}
+
+.work-example-slide>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover
+}
+
+@media (max-width:1200px) {
+  .work-example-slide {
+    height: 16rem
+  }
+}

@@ -1,0 +1,48 @@
+.warranty {
+  padding: 1rem 0;
+
+  &__wrapper {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  &__inner {
+    padding: 1.5rem;
+    border: 1px solid #BEBEBE;
+    border-radius: .5rem;
+    flex: 1;
+  }
+
+  &__desc {
+    font-weight: normal;
+  }
+
+  &__items-title {
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 15px 0 0;
+  }
+
+  @media (max-width:900px) {
+    &__wrapper {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width:700px) {
+    &__title {
+      font-size: 24px;
+    }
+
+    &__desc {
+      font-size: 14px;
+    }
+  }
+}

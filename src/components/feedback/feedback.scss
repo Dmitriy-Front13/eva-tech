@@ -1,0 +1,33 @@
+.feedback {
+  background: url(../../assets/images/feedback-bg.jpg) center center / cover no-repeat;
+  &__title {
+    color: #fff;
+  }
+}
+
+.feedback-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-width: 53.75rem;
+  margin-inline: auto;
+
+  &__field {
+    flex: 1 0 auto;
+
+    &:last-of-type {
+      flex: 1 1 100%;
+      resize: vertical;
+    }
+  }
+
+  &__input,
+  &__message {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.125);
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.75);
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.comparison {
+  background: url(../../assets/images/about-product/comparison/comparison-bg.jpg) center center / cover no-repeat;
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem
+  }
+}
+
+.card-comparison {
+  color: #fff;
+  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, .5);
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 23.75rem;
+  flex: 0 1 23.75rem;
+
+  &--highlighted {
+    color: #01232d;
+    ;
+    background-color: #fff;
+    border: 2px solid #d42920;
+  }
+
+  &__title {
+    font-size: 1.675rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+
+    span {
+      color: #d42920;
+    }
+  }
+
+  &__image {
+    position: relative;
+    padding-bottom: 80%;
+
+    img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover
+    }
+  }
+}
+
+@media (max-width:1150px) {
+  .card-comparison--highlighted {
+    order: 3
+  }
+}
